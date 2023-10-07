@@ -1,0 +1,64 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/publications.css' %}">
+
+<div class="webPageContent">
+    <div class="webSideBar">
+        <div class="webNavBar">
+            <div class="webNavBarSection">
+                <div class="webNavBarSectionHeader">
+                    <a class="webNavBarLink" href="/">Home</a>
+                </div>
+            </div>
+            <div class="webNavBarSection">
+                <div class="webNavBarSectionHeader">About</div>
+                <div class="webNavBarSectionSubHeader">
+                    <a class="webNavBarLink" href="/bio">Bio</a>
+                    <a class="webNavBarLink" href="/teaching">Teaching</a>
+                    <a class="webNavBarLink" href="/publications">Publications</a>
+                    <a class="webNavBarLink" href="/research-interests">Research Interests</a>
+                </div>
+            </div>
+            <div class="webNavBarSection">
+                <div class="webNavBarSectionHeader">People</div>
+                <div class="webNavBarSectionSubHeader">
+                    <a class="webNavBarLink" href="members">Members</a>
+                    <a class="webNavBarLink" href="lab-photos">Lab Photos</a>
+                </div>
+            </div>
+            <div class="webNavBarSection">
+                <div class="webNavBarSectionHeader">
+                    <a class="webNavBarLink" href="opportunities">Opportunities</a>
+                </div>
+            </div>
+            <div class="webNavBarSection">
+                <div class="webNavBarSectionHeader">
+                    <a class="webNavBarLink" href="contact">Contact</a>
+                </div>
+            </div>
+            <div class="webNavBarSection">
+                <div class="webNavBarSectionHeader">
+                    <a class="webNavBarLink" href="useful-links">Useful Links</a>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <main class="webPageMainContent">
+        <div class="webPageHeader">
+            <div class="webPageHeaderTitle">
+                Zhao Laboratory
+            </div>
+            <div class="webPageHeaderSubtitle">
+                Department of biological sciences
+            </div>
+            <div class="webPageHeaderSubtitle">
+                Department of Cell & Systems Biology
+            </div>
+        </div>
+        {% if pageTitle != "Zhao Laboratory" %}
+            <div class="webPageTitle">{{ pageData.pageTitle}}</div>
+        {% endif %}
+        {% block content %}
+        {% endblock %}
+    </main>
+</div>

@@ -1,0 +1,16 @@
+{% extends "zhaolabsinfo/pages/index.html" %}
+
+{% block content %}
+<h3>Current Lab Members</h3>
+<ul>
+    {% for member in pageData.current %}
+    <li>{{ member.name }}</li>
+    {% endfor %}
+</ul>
+<h3>Past Lab Members</h3>
+<ul>
+    {% for member in pageData.past %}
+    <li>{{ member.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

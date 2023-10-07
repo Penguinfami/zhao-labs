@@ -1,0 +1,18 @@
+.publicationsList {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.publicationYear {
+    width: 20%;
+}
+
+
+.publicationsForYear {
+    width: 75%;
+}
+
+.publication {
+    margin-bottom: 10px;
+}

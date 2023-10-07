@@ -1,0 +1,75 @@
+:root {
+    --primary-dark1: #002256;
+    --primary-dark2: #00398D;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
+}
+.webPageContent {
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.webSideBar {
+    min-height: 70vh;
+    min-width: 300px;
+    font-weight: bold;
+}
+
+.webNavBarSectionHeader, .webNavBarSectionHeader .webNavBarLink, .webNavBarSectionHeader .webNavBarLink:visited {
+    font-size: 40px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-top: 30px;  
+    color: var(--primary-dark1); 
+}
+
+.webNavBarSectionSubHeader, .webNavBarSectionSubHeader .webNavBarLink, .webNavBarSectionSubHeader .webNavBarLink:visited {
+    font-size: 16px;
+    display: flex;
+    flex-flow: column nowrap;
+    color: var(--primary-dark2);
+}
+
+.webNavBarLink, .webNavBarLink:visited {
+    text-decoration: none;
+}
+
+.webPageMainContent {
+    width: 100%;
+    padding: 20px;
+}
+
+.webPageHeader {
+    color: var(--primary-dark1);
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 30px;
+}
+
+.webPageHeaderTitle {
+    width: 100%;
+    font-size: 64px;
+}
+
+.webPageHeaderSubtitle {
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+
+.webPageTitle {
+    background-color: #5F9BF3;
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    padding: 10px;
+    color: white;
+}

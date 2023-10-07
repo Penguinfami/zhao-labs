@@ -1,0 +1,26 @@
+{% extends "zhaolabsinfo/pages/index.html" %}
+
+{% block content %}
+<h3>Representative Publications</h3>
+<div class="publicationsList">
+    {% for yearRange in pageData.publicationYearRanges %}
+        <div class="publicationYear">{{ yearRange.min }}-{{yearRange.max}}</div>
+        {% for key, publications in pageData.publications.items %}
+            {% if key == yearRange.min %}
+                <div class="publicationsForYear">
+                {% for publication in publications %}
+                    <div class="publication">
+                        {{ publication.authors }}({{ publication.year}}). {{publication.title}}
+                        <span><b><i>{{ publication.organization }}</i></b></span>
+                        {{ publication.pages }}{% if publication.link != None %},
+                                                    <a href="{{ publication.link }}">{{ publication.link }}</a>
+                                                {% endif %}
+                    </div>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>
+
+{% endblock %}

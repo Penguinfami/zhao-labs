@@ -1,0 +1,16 @@
+{% extends "zhaolabsinfo/pages/index.html" %}
+
+{% block content %}
+{% for positionType in pageData.bioItemsKeys %}
+    <h1>{{ positionType }}</h1>
+    <ul>
+        {% for key, value in pageData.bioItems.items %}
+            {% if key == positionType %}
+                {% for item in value %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endfor %}
+{% endblock %}

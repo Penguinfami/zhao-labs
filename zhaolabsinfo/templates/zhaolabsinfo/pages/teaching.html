@@ -1,0 +1,21 @@
+{% extends "zhaolabsinfo/pages/index.html" %}
+
+{% block content %}
+<h3>CURRENTLY TEACHING</h3>
+
+{% for courseType in pageData.coursesKeys %}
+<h4>{{ courseType }} courses</h4>
+<ul>
+    {% for key, value in pageData.courses.items %}
+        {% if key == courseType %}
+            {% for item in value %}
+                <li>
+                    <span><a href="{{ item.courseLink }}">{{ item.courseCode }}</a>: {{ item.name }}</span>
+                </li>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endfor %}
+
+{% endblock %}
